@@ -7,13 +7,17 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Welcome to the Age Calculator</h1>
-        <form id="ageForm">
-            <label for="birthYear">Enter your birth year:</label>
-            <input type="date" id="birthYear" required>
-            <button type="submit" id="calculate">Calculate Age</button>
-        </form>
-        <div id="result"></div>
-        <script src="server.js"></script>
+        <div class="container">
+            <h1>Age Calculator</h1>
+            <form id="ageForm" aria-label="Age Calculator Form">
+                <label for="birthDate">Enter your birth date and time:</label>
+                <input type="date" id="birthDate" required aria-required="true">
+                <input type="time" id="birthTime" value="00:00">
+                <button type="submit" id="calculate">Calculate Age</button>
+            </form>
+            <div id="result" aria-live="polite"></div>
+            <div id="extraResults" aria-live="polite"></div>
+            <script src="server.js"></script>
+        </div>
     </body>
 </html>
